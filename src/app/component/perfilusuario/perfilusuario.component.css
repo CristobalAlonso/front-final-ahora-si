@@ -1,0 +1,19 @@
+#texto{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  background-color:rgb(255, 255, 255);
+  padding: 2%;
+}
+.container{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 5%;
+  
+}
+nav ul li:hover {
+  background: #a58ff0;
+  }
+  .boton:hover{
+    background-color:#a58ff0;
+  }

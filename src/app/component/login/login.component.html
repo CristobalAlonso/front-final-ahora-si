@@ -1,0 +1,46 @@
+<div id="contenedorfondo">
+    <div class="row">
+        <div class="col-sm" style="margin-left: 15%;">
+            <div id="contenedor">
+                <img src="assets\avatar.png" alt="" style="width: 30%; height: 30%;">
+                <br><br>
+                <h6 id="texto">Iniciar
+                    <br><br>
+                    <input placeholder="Email@" type="email" (keyup)="emailkeyup($event.target.value)" style="text-align: center; width: 75%;">
+                    <br><br>
+                    <input placeholder="Contraseña" type="password" (keyup)="passkeyup($event.target.value)" style="text-align: center; width: 75%;">
+                    <label id="textRed" ><small style="color: red;">Contraseña o usuarios incorrecto</small></label>
+                    <br><br>
+                    <button type="button" (click)="login3()" class="btn btn-light">continuar</button>
+                    <br><br>
+                    <small style="color: rgb(163, 162, 162);">¿olvidaste tu contraseña?</small>
+                </h6>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div id="contenedor" style="margin-left: 15%;">
+                <img src="assets\avatar.png" alt="" style="width: 30%; height: 30%;">
+                <br><br>
+                <h6 id="texto">Registrar
+                    <br><br>
+                    <p>al registrarse como un nuevo usuario, usted podra ingresar y ver el estado de sus tramites</p>
+                    <br><br>
+                    <a href="/registro" target="_self"><button type="button" class="btn btn-light">continuar</button></a>
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a href="" target="_self"><button type="button" class="btn btn-light" style="margin: 3%;">Salir</button></a> 
+    <button type="button" class="btn btn-light" style="text-align: right;" style="margin-left: 82%;" (click)='botonAdmin();'>Admin</button>
+</div>
+<div id="visible">
+    <div id="contenedor" style="position: absolute; top: 10%; left: 25%; background-color: rgb(184, 184, 184 ,0.8)">
+        <p style="color: white;">Ingresa el codigo de Admin</p>
+        <input type="password" placeholder="codigo" (keyup)=passAdminKeyup($event.target.value);>
+        <br><br>
+        <button (click)='ingresar();'>Ingresar</button>
+        <button (click)='botonSalirAdmin();'>Salir</button>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<html>
+    <body class="container">
+        
+        <div class="row 40">
+            <div class= "col"align= "center">
+                <h2>Portal Administrador </h2>
+            </div>
+        </div>
+        <div class= "col"align= "left">
+            <h4>Ejecutivos disponibles <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="margin-left: 2%;">Agregar</button></h4>
+        </div>
+  
+        <!-- Modal -->
+         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+             <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Nuevo Ejecutivo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ingrese los datos del nuevo ejecutivo, porfavor.
+    
+            <div class="col-lg">
+
+                        <br><br>
+                        <input id="nombreR" #filterName name='filterName' placeholder="Nombre" type="text" (keyup)="nombreKeyup($event.target.value)" style="text-align: center;">
+                        <br><br>
+                        <input id="apellidoR" placeholder="Apellido" type="text" (keyup)='apellidoKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <input id="correoR" placeholder="Correo" type="email" (keyup)='correoKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <input id="passR" placeholder="Contraseña" type="password" (keyup)='passKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <div class="btn-group">
+                            <button id="tituloBoton" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                              Sección <span class="caret"></span>
+                            </button>
+                          
+                            <ul class="dropdown-menu" role="menu">
+                              <li> <button id="SeccionA" (click)="seccionA();">Sección A</button> </li>
+                              <li> <button id="SeccionB" (click)="seccionB();">Sección B</button></li>
+                            </ul>
+                          </div>
+                        <br><br>
+
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='registroEjecutivo()'>Guardar</button>
+        </div>
+      </div>
+        </div>
+         </div>
+        <div id="fondotras">
+          <table class="table" style="background-color: white;">
+              <thead class="thead-dark">
+                      <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellido</th>
+                          <th scope="col">Correo</th>
+                          <th scope="col">Permiso</th>
+                          <th scope="col">Seccion A</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of user">
+                          <td>{{item.name}}</td>
+                          <td>{{item.lastname}}</td>
+                          <td>{{item.mail}}</td>
+                          <td>{{item.permission}}</td>
+                          <td>{{item.a_section}}</td>
+                          <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+                      </tr>
+                  </tbody>
+          </table>
+        </div>
+        <br><br>
+        <h4 style="margin-top: 4%;">Reclamos</h4>
+        <div id="Porcentaje">
+          <p id="text%">Porcentajes</p>
+        </div>
+        <div id="tableRec">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Lugar</th>
+                <th scope="col">Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item2 of reclamo">
+                <th scope="row">{{item2.id}}</th>
+                <td>{{item2.tipo}}</td>
+                <td>{{item2.lugar}}</td>
+                <td>{{item2.nota}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+</body>
+</html>

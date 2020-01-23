@@ -1,0 +1,46 @@
+.container{
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.xl{
+    margin-bottom: 2%;
+    background-color: rgba(51, 51, 51, 0.13)s;
+}
+
+.xx{
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+.botondesp{
+    color: rgb(3, 3, 2);
+    background-color: cornsilk;
+}
+
+.check{
+  tab-size: 5cm;
+}
+.navbar-expand{
+  align-content: flex-end !important;
+}
+
+#botonesDe{
+  background-color: white;
+  width: 100%;
+  padding: 5%;
+  color: #000;
+}
+
+#elecciones{
+  text-align: center;
+}
+
+#fondotras{
+  background-color: rgb(255, 255, 255,0.2);
+  width: 100%;
+  height: 800px;
+}
+#serviciob{
+  width: 100%;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html> <html lang="en">
+  <header  >
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand " style="color: #808080;" href="#"><b>BIENVENIDO A SU PORTAL</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:#808080;" ><b>Agregar reclamos</b> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:#808080;" ><b>Perfil</b> <span class="sr-only">(current)</span></a>
+          </li>              <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:#808080;" ><b>Historial de reclamos</b> <span class="sr-only">(current)</span></a>
+          </li>              <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:#808080;" ><b><h5>Salir</h5></b> <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+</header>
+  
+  <body class="container">    
+      <section >
+          <div>
+          <h2 class="display-4" style="color: #808080;">Usuario</h2>
+          <p class="lead">Aqui puedes cambiar tu información personal</p>
+          </div>
+          <div>
+              <h3>Perfil</h3>
+          </div>
+          <div class=" row f">
+            <div class="col-6">
+              <h5>Nombre</h5>     
+            </div>
+            <div class="col-6">
+              <input type="text" (keyup)="nombreKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div
+             class="col-6">
+              <h5>Apellido </h5>  
+            </div>
+            <div class="col-6">
+              <input type="text" (keyup)="apellidoKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div class="col-6">
+              <h5>Rut</h5>        
+            </div>
+            <div class="col-6">
+              <input placeholder="00000000-0" type="text" (keyup)="rutKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div class="col-6">
+              <h5>Fecha de nacimiento</h5>       
+            </div>
+            <div class="col-6">
+              <input placeholder="00/00/0000"type="text" (keyup)="nacimientoKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div class="col-6">
+              <h5>Correo  </h5>  
+            </div>
+            <div class="col-6">
+               <input placeholder="aaaaaa@gmail.com"type="text" (keyup)="correoKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class=" row f">
+            <div class="col-6">
+              <h5>Contraseña</h5> 
+            </div>
+            <div class="col-6">
+              <input placeholder="********"type="password" (keyup)="contrasenaKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+
+          <div class="row f">
+            <div class="col-6">
+              <h5>Fecha de nacimiento</h5>       
+            </div>
+            <div class="col-6">
+              <input placeholder="00/00/0000"type="text" (keyup)="nacimientoKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div class="col-6">
+              <h5 >Contacto</h5>  
+            </div>
+            <div class="col-6">
+               <input placeholder="+56 9-000 000 00"type="text" (keyup)="contactoKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div class="col-6">
+              <h5 >Dirección</h5>  
+            </div>
+            <div class="col-6">
+               <input type="text" (keyup)=" direccionKeyUp($event.target.value)">
+            </div>
+          </div>
+          <br>
+          <div class="row f">
+            <div class="col-6">
+            </div>
+            <div class="col-6" >
+              <div><a href="/reclamos" target="_self"><button type="button"  class="btn boton btn-secondary btn-lg" disabled>GUARDAR</button></a>
+              </div>
+            </div>  
+          </div>
+            
+  
+       </section>
+      
+  </body>
+  </html>

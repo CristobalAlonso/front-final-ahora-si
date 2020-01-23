@@ -1,0 +1,17 @@
+<div style="background-color: rgb(255, 255, 255,0.2);" >
+    <div id="texto" style="text-align: center;">
+        <h1 style="text-align: center;">Registro Admin</h1>
+        <br>
+        <pre>Correo             <input type="text" (keyup)="correoKeyup($event.target.value)"></pre>
+        <pre>Contraseña         <input type="password" (keyup)="contrasenaKeyup($event.target.value)"></pre>
+        <pre>Nombre             <input type="text" (keyup)="nombreKeyup($event.target.value)"></pre>
+        <br>
+        <div style="text-align: center;">
+        <button type="button" class="btn btn-light" (click)='registro()' style=" background-color: black; color: white;">Registrarse</button>
+        </div>
+        <br>
+    </div>
+</div>
+<div style="text-align: center;">
+    <a href="/login" target="_self"><button type="button" class="btn btn-light" style="color: black;">Salir</button></a>
+</div >
