@@ -4,5 +4,7 @@ export class ReclamoModel{
 	lugar:String;
 	nota:any;
 	texto:String;
-	id_user:any;
+	mailEjecutivo: String;
+  mailUser: String;
+
 }

@@ -111,9 +111,18 @@ export class AdmiComponent implements OnInit {
 
   public eliminarEjecutivo(){
     this.adminService.deleteEjecutivo(this.correoDelete).subscribe(res =>{
-    console.log(res);
+      console.log(res);
+      if(res){
+        window.location.reload();
+        alert('Se elimino= '+this.correoDelete);
+        console.log(res);
+      }else{
+        window.location.reload()
+        alert('No se encuentra= '+this.correoDelete);
+        console.log(res);
+      }
+      
     });
-    this.correoDelete= null;
   }
   public setCorreo(value:String){
     this.correoDelete=value;

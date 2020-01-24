@@ -42,8 +42,10 @@ export class AdminService {
   }
 
   public deleteEjecutivo(email:String) {
-    let id = email;
-    let aux = this.http.delete('http://localhost:8090/api/v1/producto/'+id, this.headerOptions );
+    let body={
+      "mail": email
+    }
+    let aux = this.http.post('http://localhost:2020/api/v1/Ejecutivo/Delete',body, this.headerOptions );
     return aux; 
   }
 

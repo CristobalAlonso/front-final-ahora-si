@@ -2,6 +2,8 @@ import { Component, OnInit, ɵConsole } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { User } from '../../model/User.model';
+import { AgregarReclamosComponent } from '../agregar-reclamos/agregar-reclamos.component';
+import { ReclamoModel } from 'src/app/model/Reclamo.model';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +18,7 @@ export class LoginComponent implements OnInit {
 
 
   constructor(
+    
     private router: Router,
     private loginService: LoginService,
     ) { }
@@ -46,15 +49,6 @@ export class LoginComponent implements OnInit {
     doc.visibility="hidden";
   }
 
-  login2(){
-    let datos:any;
-    let obs=this.loginService.loginService2(this.email);
-    obs.subscribe(validation => {
-      datos=validation;
-      console.log(datos.nombre+", "+datos.apellido);
-    });
-  }
-
   login3() {
     let doc=document.getElementById('textRed').style;
     let obs=this.loginService.LoginAdmin(this.email,this.pass);
@@ -62,6 +56,7 @@ export class LoginComponent implements OnInit {
     let obs3=this.loginService.loginEjecutivo(this.email,this.pass);
     obs.subscribe(res =>{
       if(res){
+        
         this.router.navigate(['/admin']);
       }else{
         obs3.subscribe(res3 =>{

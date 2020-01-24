@@ -18,13 +18,15 @@ export class ReclamosService {
     private http:HttpClient
   ) { }
 
-  setReclamo(lugar:string,nota:any,texto:string,tipo:string){
+  setReclamo(lugar:string,nota:any,texto:string,tipo:string,mailUser:string){
     let body={
-        "id":null,
-        "lugar": lugar,
-        "nota": nota,
-        "texto": texto,
-        "tipo": tipo
+      "id": null,
+      "lugar": lugar,
+      "mailEjecutivo": null,
+      "mailUser": mailUser,
+      "nota": nota,
+      "texto": texto,
+      "tipo": tipo
     }
     let aux= this.http.post('http://localhost:2020/api/v1/Reclamo',body,this.headerOptions);
     return aux;
