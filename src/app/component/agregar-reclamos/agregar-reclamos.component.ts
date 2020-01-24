@@ -12,6 +12,7 @@ export class AgregarReclamosComponent implements OnInit {
 	private lugar:string;
 	private nota:any;
   private texto:string;
+  private email:string;
 
   constructor(
     private reclamos:ReclamosService,
@@ -79,11 +80,11 @@ export class AgregarReclamosComponent implements OnInit {
     this.texto=value;
   }
 
+
   enviarReclamo(){
-    let obs=this.reclamos.setReclamo(this.lugar,this.nota,this.texto,this.tipo);
+    let obs=this.reclamos.setReclamo(this.lugar,this.nota,this.texto,this.tipo,this.email);
     obs.subscribe(res=>{
-      alert('Reclamo enviado');
-      window.location.reload();
+      alert('reclamo enviado');
     });
   }
 
