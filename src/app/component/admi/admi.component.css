@@ -23,14 +23,14 @@
 
 #fondotras{
     width:100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ffffff;
     margin-top: 2%;
     height: 300px;
     overflow: scroll;
 }
 
 .container{
-    background-color: rgb(255, 255, 255,0.5);
+    background-color: rgba(255, 255, 255, 0.315);
 }
 
 #tableRec{
@@ -45,4 +45,10 @@
     background-color: rgb(255, 255, 255,0.6);
     font-size: 200%;
     text-align: center;
+}
+.titulo{
+    background-color: #e3f2fd;
+}
+.modal-header{
+    background-color: #e3f2fd;
 }

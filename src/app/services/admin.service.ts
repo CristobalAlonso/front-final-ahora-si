@@ -40,4 +40,11 @@ export class AdminService {
   public InfoReclamo():Observable<ReclamoModel[]>{
     return this.http.get<ReclamoModel[]>('http://localhost:2020/api/v1/Reclamo');
   }
+
+  public deleteEjecutivo(email:String) {
+    let id = email;
+    let aux = this.http.delete('http://localhost:8090/api/v1/producto/'+id, this.headerOptions );
+    return aux; 
+  }
+
 }

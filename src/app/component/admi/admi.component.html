@@ -2,13 +2,27 @@
     <body class="container">
         
         <div class="row 40">
-            <div class= "col"align= "center">
-                <h2>Portal Administrador </h2>
+            <div class= "col titulo"align= "center">
+                <h2><b>Portal Administrador</b> </h2>
             </div>
         </div>
-        <div class= "col"align= "left">
-            <h4>Ejecutivos disponibles <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="margin-left: 2%;">Agregar</button></h4>
+        <div class="row">
+          <div class= "col-4"align= "center">
+            <h3> <button type="button" class="btn " data-toggle="modal" data-target="#exampleModalLong" style="margin-left: 2%;"><img src="https://img.icons8.com/ios-filled/50/000000/add-user-male.png"></button></h3>
+          </div>
+       
+            <div class= "col-4"align= "center">
+              <h3> <button type="button" class="btn" data-toggle="modal" data-target="#graficosModel" style="margin-left: 2%;"><img src="https://img.icons8.com/color/48/000000/bullish.png"></button></h3>
+            </div>
+              <div class= "col-4"align= "center">
+                <h3> <button type="button" class="btn" data-toggle="modal" data-target="#urgentesModel" style="margin-left: 2%;"><img src="https://img.icons8.com/ios-filled/50/700000/urgent-property.png"></button></h3>
+              </div>
+           
+         
         </div>
+          <div>
+            <h4> Ejecutivos disponibles </h4>
+          </div>
   
         <!-- Modal -->
          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -52,13 +66,85 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          
           <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='registroEjecutivo()'>Guardar</button>
         </div>
       </div>
         </div>
          </div>
-        <div id="fondotras">
+         <div class="modal fade" id="graficosModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Porcentajes de reclamos </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                 estos son los datos registrados hasta ahora 
+            
+                    <div class="col-lg">
+
+                      <div id="Porcentaje">
+                        <p id="text%"></p>
+                      </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+           </div>
+       </div>
+       <div class="modal fade" id="urgentesModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Reclamos urgentes  </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             estos son los datos registrados hasta ahora 
+        
+                <div class="col-lg">
+                  <div id="tableRec">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Tipo</th>
+                          <th scope="col">Lugar</th>
+                          <th scope="col">Nota</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item2 of reclamo">
+                          <th scope="row">{{item2.id}}</th>
+                          <td>{{item2.tipo}}</td>
+                          <td>{{item2.lugar}}</td>
+                          <td>{{item2.nota}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                   
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+       </div>
+   </div>
+        <div id="fondotras" >
           <table class="table" style="background-color: white;">
               <thead class="thead-dark">
                       <tr>
@@ -82,29 +168,33 @@
           </table>
         </div>
         <br><br>
-        <h4 style="margin-top: 4%;">Reclamos</h4>
-        <div id="Porcentaje">
-          <p id="text%">Porcentajes</p>
-        </div>
-        <div id="tableRec">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Lugar</th>
-                <th scope="col">Nota</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item2 of reclamo">
-                <th scope="row">{{item2.id}}</th>
-                <td>{{item2.tipo}}</td>
-                <td>{{item2.lugar}}</td>
-                <td>{{item2.nota}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <h3> <button type="button" class="btn " align="center" data-toggle="modal" data-target="#eliminarModel" style="margin-left: 2%;"><img src="https://img.icons8.com/ios-filled/50/000000/remove-user-male.png"></button></h3>
+        <div class="modal fade" id="eliminarModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Eliminar ejecutivo  </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  Agregar correo de ejecutivo a eliminar 
+          
+                  <div class="col-lg">
+                    <input id="correoDelete" placeholder="correo ejecutivo" type="text" (keyup)='setCorreo($event.target.value)' style="text-align: center;">
+                     
+                  </div>
+  
+  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                
+              </div>
+            </div>
+         </div>
+     </div>
+        
 </body>
 </html>

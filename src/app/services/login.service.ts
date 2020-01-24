@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,} from '@angular/common/http'
+import { User } from '../model/User.model';
 
 
 @Injectable({
@@ -51,4 +52,5 @@ export class LoginService {
     let aux= this.http.post('http://localhost:2020/api/v1/Admin/login',body,this.headerOptions);
     return aux;
   }
-}
+ 
+  }

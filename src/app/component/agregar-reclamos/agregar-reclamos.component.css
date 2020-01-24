@@ -1,8 +1,8 @@
 .container{
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 7%;
-    margin-left: 7%;
-    margin-right: 7%;
+    background-color: rgba(241, 241, 241, 0.699);
+    -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
+   
+ 
 }
 .xl{
     margin-bottom: 2%;
@@ -17,16 +17,16 @@
     color: rgb(3, 3, 2);
     background-color: cornsilk;
 }
-
+.botondesp:hover{
+  background-color:#8b8b8b;
+}
 .check{
   tab-size: 5cm;
 }
-.navbar-expand{
-  align-content: flex-end !important;
-}
+ 
 
 #botonesDe{
-  background-color: white;
+  
   width: 100%;
   padding: 5%;
   color: #000;
@@ -39,8 +39,15 @@
 #fondotras{
   background-color: rgb(255, 255, 255,0.2);
   width: 100%;
-  height: 800px;
+ 
 }
 #serviciob{
   width: 100%;
+}
+
+.enviar:hover{
+  background-color:#a58ff0;
+}
+.titulo{
+  background-color: #e3f2fd;
 }
