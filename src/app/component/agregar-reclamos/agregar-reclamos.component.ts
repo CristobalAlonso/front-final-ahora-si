@@ -85,6 +85,7 @@ export class AgregarReclamosComponent implements OnInit {
     let obs=this.reclamos.setReclamo(this.lugar,this.nota,this.texto,this.tipo,this.email);
     obs.subscribe(res=>{
       alert('reclamo enviado');
+      window.location.reload();
     });
   }
 
