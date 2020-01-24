@@ -22,6 +22,7 @@ export class AdmiComponent implements OnInit {
   private contador3:any;
   private contador4:any;
   private porcentajes:any;
+  private correoDelete: String;
   
 
   constructor(
@@ -106,5 +107,15 @@ export class AdmiComponent implements OnInit {
       this.porcentajes="Baquedano= "+Math.floor(this.contador1)+"%, Estacion central= "+Math.floor(this.contador2)+"%, Tobalaba= "+Math.floor(this.contador3)+"%";
       document.getElementById('text%').innerText=this.porcentajes;
     });
+  }
+
+  public eliminarEjecutivo(){
+    this.adminService.deleteEjecutivo(this.correoDelete).subscribe(res =>{
+    console.log(res);
+    });
+    this.correoDelete= null;
+  }
+  public setCorreo(value:String){
+    this.correoDelete=value;
   }
 }
