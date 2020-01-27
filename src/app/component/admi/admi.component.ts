@@ -81,6 +81,7 @@ export class AdmiComponent implements OnInit {
       this.user=res;
     });
   }
+  // estos son los reclamos
   reqInfoReclamos(){
     this.adminService.InfoReclamo().subscribe(res2 =>{
       this.reclamo=res2;

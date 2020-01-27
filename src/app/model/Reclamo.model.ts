@@ -1,10 +1,10 @@
 export class ReclamoModel{
 	id:any;
-	tipo:String;
-	lugar:String;
+	tipo:string;
+	lugar:string;
 	nota:any;
-	texto:String;
-	mailEjecutivo: String;
-  mailUser: String;
+	texto:string;
+	mailEjecutivo: string;
+ 	mailUser: string;
 
 }
