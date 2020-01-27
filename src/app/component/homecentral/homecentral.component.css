@@ -3,6 +3,10 @@
    margin-left: 35%;
    margin-right: 35%;
    margin-top: 5%;
-   background-color:rgb(255, 255, 255);
+   background-color:rgba(255, 255, 255, 0.541);
    padding: 3%;
 }
+#container{
+  background-color: rgba(218, 175, 175, 0.733);
+}
+

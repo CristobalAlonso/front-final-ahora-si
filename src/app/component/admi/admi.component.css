@@ -31,8 +31,7 @@
 }
 
 .container{
-    background-color: #ffffff60;
-    
+    background-color: rgba(255, 255, 255, 0.699);
     -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
   
 }
@@ -46,7 +45,7 @@
 }
 
 #Porcentaje{
-    background-color: rgb(255, 255, 255,0.6);
+    
     font-size: 200%;
     text-align: center;
 }
@@ -55,4 +54,8 @@
 }
 .modal-header{
     background-color: #e3f2fd;
+}
+#fondo{
+    background-color: crimson;
+    height: 900px;
 }

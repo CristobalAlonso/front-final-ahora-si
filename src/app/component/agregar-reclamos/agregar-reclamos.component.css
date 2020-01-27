@@ -1,9 +1,8 @@
 .container{
     background-color: rgba(241, 241, 241, 0.513);
     -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
-   
- 
 }
+ 
 .xl{
     margin-bottom: 2%;
     background-color: rgba(51, 51, 51, 0.13)s;
@@ -37,7 +36,7 @@
 }
 
 #fondotras{
-  background-color: rgb(255, 255, 255,0.2);
+  background-color: rgba(255, 255, 255, 0.561);
   width: 100%;
  
 }
@@ -50,4 +49,9 @@
 }
 .titulo{
   background-color: #e3f2fd;
+}
+
+#fondo{
+  background-color: blueviolet;
+  height: 900px;
 }

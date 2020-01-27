@@ -1,27 +1,34 @@
-.container{
-    margin-left: 15%;
-    margin-right: 7%;
-    margin-bottom: 7%;
+.container-xl{
+
     -webkit-box-shadow: 8px 6px 4px -1px rgba(0, 0, 0, 0.418);
     width:100%;
-    background-color: #ffffff60;
-    margin-top: 2%;
-    height: 300px;
+    background-color: rgba(255, 255, 255, 0.691);
+
+    
    
 }
-nav ul li:hover {
-    background: #a58ff0;
-    }
+
     .titulo{
         background-color: #e3f2fd;
     }
-    .titulo{
-        background-color: #e3f2fd;
-    }
+    
     #fondotras{
+        width:100%;
+     
+        margin-top: 2%;
+        overflow: scroll;
+    }
+    .nav:hover{
+        color: blue;
+    }
+    #fondo{
+        background-color: darkgoldenrod;
+        height: 900px;
+    } 
+    .tabla1{
         width:100%;
         background-color: #ffffff;
         margin-top: 2%;
-        height: 300px;
-        overflow: scroll;
-    }
+        height: 400px;
+       overflow: hidden;
+      }

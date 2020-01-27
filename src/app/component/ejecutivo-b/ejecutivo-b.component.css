@@ -11,15 +11,24 @@
       
       }
       .container{
-        margin-left: 15%;
-        margin-right: 7%;
-        margin-bottom: 7%;
+    
         -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
         width:100%;
-        background-color: #ffffff60;
-        margin-top: 2%;
-        height: 300px;
+        background-color: rgba(255, 255, 255, 0.691);
+      
+       
     }
     .titulo{
       background-color: #e3f2fd;
+  }
+  #fondo{
+    background-color: orange;
+    height: 900px;
+  }
+  .tabla1{
+    width:100%;
+    background-color: #ffffff;
+    margin-top: 2%;
+    height: 400px;
+   overflow: hidden;
   }
