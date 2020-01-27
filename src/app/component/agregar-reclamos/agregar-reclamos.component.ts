@@ -20,6 +20,7 @@ export class AgregarReclamosComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
   }
 
   lugar1(){
